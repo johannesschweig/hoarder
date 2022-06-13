@@ -1,5 +1,9 @@
 <script setup>
 import Collection from './components/Collection.vue'
+import { getStore } from './utils/index.js'
+
+console.log("Created")
+console.log(getStore())
 </script>
 
 <template>
