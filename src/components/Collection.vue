@@ -18,7 +18,12 @@ const { works } = storeToRefs(useStore())
         <div class='text'>
           <span class='title'>{{ work.title }}</span>
           <br>
-          <span class='artist'>{{ work.artist }}</span>
+          <span class='subtitle'>{{ work.artist }}</span>
+          <span
+            v-if='work.year > 0'
+            class='subtitle'>
+            - {{ work.year }}
+          </span>
         </div>
       </div>
   </div>
@@ -40,7 +45,7 @@ const { works } = storeToRefs(useStore())
   padding: 8px;
 }
 
-.artist {
+.subtitle {
   font-size: 14px;
   opacity: .8;
 }
